@@ -26,7 +26,7 @@ module.exports = {
 		image.android.compress(android.graphics.Bitmap.CompressFormat.JPEG, 100, stream);
 
 		var imageFileName = "socialsharing" + numberOfImagesCreated + ".jpg";
-		var newFile = new java.io.File(context.getExternalFilesDir(null), imageFileName);
+		var newFile = new java.io.File(application.android.context.getExternalFilesDir(null), imageFileName);
 
 		var fos = new java.io.FileOutputStream(newFile);
 		fos.write(stream.toByteArray());
